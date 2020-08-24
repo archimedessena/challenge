@@ -183,3 +183,113 @@ var player = testObj[playerNumber];   // Change this line
 console.log(player);
 
 
+
+
+
+// Javascript object
+var myDog = {
+  // Only change code below this line
+  "name": "men",
+  legs: 67,
+  tails: 6,
+  friends: ["kofi", 5, [5, "ama"]]
+  
+  };
+  console.log(myDog.friends)
+
+
+  // Accessing object using notation
+  // Setup
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+
+// Accessing using a bracket notation
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
+
+
+// Accessing object using variables
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+
+var playerNumber = 16;       // Change this line
+var player = testObj[playerNumber];   // Change this line
+
+
+// Updating object
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog["name"] = "Happy Coder";
+
+
+// updating
+var names = {
+  "Kofi": 12,
+  "Fifii": 34,
+  "Yvonne": 30
+}
+names.Kofi = 253;
+console.log(names.Kofi);
+
+
+names.Wonder = 34;
+names.Michael = 45;
+console.log(names.Fiifi);
+console.log(names);
+
+//Delete properties from object
+delete names.Michael;
+console.log(names);
+
+
+// Using objects for lookups
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  }
+  result = lookup[val]
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
