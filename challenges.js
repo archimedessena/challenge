@@ -293,3 +293,128 @@ function phoneticLookup(val) {
 }
 
 phoneticLookup("charlie");
+
+
+// Manipulating complex objects
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+  
+    "gold": true
+  },
+
+
+  {
+  // Add a record here
+      artist: "Archimedes Sena",
+      title: "Lover Boy",
+      release_year: 2002,
+      formats: [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      gold: true
+    }
+];
+
+console.log(myMusic[0].formats)
+
+
+
+// Accessing nested objects
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+var acccess = myStorage.car.inside["passenger seat"]
+console.log(acccess)
+var anotherAccess = myStorage.car.outside.trunk
+console.log(anotherAccess)// Change this line
+
+
+// Accessing nested array
+// Setup
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+// Only change code below this line
+
+var nestedArray = myPlants[1].list;;
+console.log(nestedArray);// Change
+
+
+// Record collection
+// Setup
+var collection = {
+  2548: {
+    album: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: [
+      "Let It Rock",
+      "You Give Love a Bad Name"
+    ]
+  },
+  2468: {
+    album: "1999",
+    artist: "Prince",
+    tracks: [
+      "1999",
+      "Little Red Corvette"
+    ]
+  },
+  1245: {
+    artist: "Robert  Palmer",
+    tracks: [ ]
+  },
+  5439: {
+    album: "ABBA Gold"
+  }
+};
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+  if(value === "") delete collection[id][prop];
+ else if(prop === "tracks"){
+collection[id][prop] = collection[id][prop] || [];
+collection[id][prop].push(value);
+ }else
+ collection[id][prop] = value;
+
+
+  return collection;
+}
+
+updateRecords(5439, "artist", "ABBA");
+
