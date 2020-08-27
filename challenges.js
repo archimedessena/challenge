@@ -415,6 +415,187 @@ collection[id][prop].push(value);
 
   return collection;
 }
-
 updateRecords(5439, "artist", "ABBA");
+
+
+// Iterating using while loop
+/*function binary_search(arr, item){
+  var low = 0
+  var high = (arr.length) - 1;
+  while(low <= high){
+    let mid = (low + high) / 2;
+    let guess = arr[mid]
+    if (guess == item){
+      return mid;
+      low++
+    }
+    if (guess > item){
+      high = mid - 1;
+    }return low = mid + 1
+  }
+}
+
+console.log(binary_search([4, 5, 67, 78], 67))*/
+
+
+// Iterating
+// Setup
+/*var num = [];
+var i = 0
+while (i < 5){
+  num.push(i);
+  i++;
+
+}
+
+console.log(i)*/
+
+//Iterating
+// Setup
+var myArray = [];
+
+// Only change code below this line
+var i = 5;
+while (i > 0){
+     myArray.push(i);
+     i--;
+}  
+console.log(myArray);
+
+
+// for loop
+var myArrayOne = [];
+
+// Only change code below this line
+var i;
+for(i = 1; i < 6; i++){
+  myArrayOne.push(i);
+  
+}
+console.log(myArrayOne)
+
+// iterating with for-loop
+// Setup
+var neat = []
+for (i = 2; i < 8; i++){
+  neat.push(i)
+}
+console.log(neat)
+
+
+
+// iterate odd numbers using for loop
+// Setup
+var myArray = [];
+
+// Only change code below this line
+var i;
+for (i = 1; i < 10; i += 2){
+  myArray.push(i);
+}
+
+
+// count backward using for lookup// Setup
+var myArray = [];
+
+// Only change code below this line
+for(var i = 9; i > 0; i -= 2){
+  myArray.push(i);
+}
+
+// iterate through an array using a forloop
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+
+total = 0;
+for (i = 0; i < myArr.length; i++){
+  total -= myArr[i]
+}
+console.log(total)
+
+// Nested for loop
+function multiplyAll(arr){
+  var product = 1;
+  for (var i = 0; i < arr.length; i++){
+    for (var j =0; j < arr[i].length; j++){
+      product = product * arr[i][j];
+    }
+  }
+}
+var house = [[4, 5, 6],[4, 6]]
+console.log(multiplyAll(house));
+
+
+// iterate using do while loop
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line
+do {
+   myArray.push(i);
+  i++;
+}while (i < 5) 
+
+
+
+// replace loop using recursion
+function sum(arr, n) {
+  // Only change code below this line
+if (n <= 0){
+  return 0;
+}else {
+  return sum(arr, n - 1) + arr[n - 1];
+}
+  // Only change code above this line
+}
+var arrs = [ 5, 6, 7, 8, 9]
+console.log(sum(arrs, 3))
+
+
+// Profile lookups
+// Setup
+var contacts = [
+  {
+      "firstName": "Akira",
+      "lastName": "Laine",
+      "number": "0543236543",
+      "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "number": "0994372684",
+      "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+      "firstName": "Sherlock",
+      "lastName": "Holmes",
+      "number": "0487345643",
+      "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+      "firstName": "Kristian",
+      "lastName": "Vos",
+      "number": "unknown",
+      "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+for (var i = 0; i < contacts.length; i++){
+    if (contacts[i].firstName === name){
+        if (prop in contacts[i]){
+            return contacts[i][prop];
+        }else return "No such property";
+    }
+}
+return "No such contact";
+// Only change code above this line
+}
+
+console.log(lookUpProfile("Akira", "likes"));
+
 
